@@ -1,3 +1,41 @@
 td, th{
     border: 1px solid black;
+    width: 120px;
+    height: 50px;
+}
+#show_all_humans_list{
+        list-style: upper-alpha;
+}
+
+body{
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+    background:   linear-gradient(rgba(170, 170, 170, 0.8), rgba(56, 56, 56, 0.575)),
+                        url(back.jpg) 100% 100%/cover no-repeat;
+                        
+}
+header{
+    text-align: center;
+}
+#human, #droid{
+    text-align: center;
+    margin: 0 auto;
+    width: 70rem;
+}
+.human-attributes, .droid-attributes{
+    display: flex;
+    justify-content: center ;
+}
+#human button, #droid-button, #show_all_humans_button{
+    display: block;
+    background: 0;
+    padding: 6px;
+    border: 1px solid black;
+    width: 100px;
+    height: 50px;
+}
+#human button h3, #droid button h3{
+    margin: 0;
+    padding: 0;
 }
