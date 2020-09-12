@@ -1,11 +1,3 @@
-td, th{
-    border: 1px solid black;
-    width: 120px;
-    height: 50px;
-}
-#show_all_humans_list{
-        list-style: upper-alpha;
-}
 
 body{
     margin: 0 auto;
@@ -13,8 +5,47 @@ body{
     width: 100vw;
     background:   linear-gradient(rgba(170, 170, 170, 0.8), rgba(56, 56, 56, 0.575)),
                         url(back.jpg) 100% 100%/cover no-repeat;
+	background-attachment:fixed;
                         
 }
+#header{
+    margin: 20px 10% 0;
+    background: rgba(56, 56, 56, 0.575);
+
+}
+#header h1{
+    margin: 0;
+}
+.wrapper{
+    background: rgba(56, 56, 56, 0.575);
+    margin: 0 10%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: -7px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+td, th{
+    border: 1px solid black;
+    width: 120px;
+    height: 50px;
+}
+/* HUMANS */
+#human{
+}
+#human th, #human h1{
+    color:cyan;
+}
+th{
+    background: rgba(56, 56, 56, 0.575);
+
+}
+
+
+#show_all_humans_list{
+        list-style: upper-alpha;
+}
+
 header{
     text-align: center;
 }
@@ -27,15 +58,67 @@ header{
     display: flex;
     justify-content: center ;
 }
-#human button, #droid-button, #show_all_humans_button{
+
+/* HUMAN BUTTONS ONLY SECTION  */
+.human-button, #droid-button, #show_all_humans_button{
     display: block;
+    position: relative;
     background: 0;
     padding: 6px;
     border: 1px solid black;
     width: 100px;
     height: 50px;
+    transition: .2s;
+
 }
-#human button h3, #droid button h3{
+.human-button:hover::after{
+    content: '';
+    position: absolute;;
+    width: 120px;
+    height: 4px;
+    left: 0;
+    top: 65%;
+    background-color: cyan;
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 12px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 50px #03e9f4;
+    border-bottom-right-radius: 32px;
+    border-top-right-radius: 32px;
+    transition: .2s;
+}
+.human-button:hover::before{
+    background-image: url('handlge.png');
+    background-size: 50px 20px;
+    display: inline-block;
+    width: 50px; 
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transition: .2s;
+    height: 20px;
+    content: '';
+}
+.human-button:hover{
+    box-shadow:33px 12px 30px #03e9f4;
+    cursor: pointer;
+    user-select: none;
+    border: transparent;
+    border-radius: 10%;
+    border-bottom: 1px solid black ;
+    border-right: 5px solid black;
+    transform: translateY(-12px);
+}
+
+.human-button h3, #droid button h3{
     margin: 0;
     padding: 0;
+}
+
+/*DROIDS ONLY*/
+#droid{
+
+}
+#droid h1,th{
+    color:orange;
 }
